@@ -210,7 +210,7 @@ class _LandingPageState extends State<LandingPage>
             end: Alignment.centerRight,
           ).createShader(bounds),
           child: const Text(
-            'ASTRAL ENGINE',
+            'X-DARK ',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
@@ -321,7 +321,7 @@ class _LandingPageState extends State<LandingPage>
                 colors: [Color(0xFF1DE9B6), Color(0xFF00C9A0)],
               ).createShader(bounds),
               child: const Text(
-                'ASTRAL BUG',
+                'X-DARK  BUG',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -333,7 +333,7 @@ class _LandingPageState extends State<LandingPage>
             ),
             const SizedBox(height: 16),
             Text(
-              'Aplikasi dengan design elegant dan fitur terbaru.\nPengembangan langsung oleh TEAM ASTRAL.',
+              'Aplikasi dengan design elegant dan fitur terbaru.\nPengembangan langsung oleh TEAM X-DARK .',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: _C.textSub,
@@ -389,7 +389,7 @@ class _LandingPageState extends State<LandingPage>
                   Icon(Icons.rocket_launch_rounded, color: _C.cyan, size: 20),
                   SizedBox(width: 12),
                   Text(
-                    'LOGIN TO ASTRAL',
+                    'LOGIN TO X-DARK ',
                     style: TextStyle(
                       color: _C.cyan,
                       fontSize: 13,

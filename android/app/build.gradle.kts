@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nullx.cyber"
+    namespace = "com.dark.app"
     compileSdk = 36
     ndkVersion = "27.0.12077973"
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.nullx.cyber"
+        applicationId = "com.dark.app"
         minSdk = flutter.minSdkVersion                         // ✅ ganti di sini
         targetSdk = 36
         versionCode = flutter.versionCode

@@ -1,1 +1,1 @@
-const String baseUrl = "http://public.queen-official.com:2720"; 
+const String baseUrl = "http://alfa-store-officials.alfamarket2.my.id:3505"; 

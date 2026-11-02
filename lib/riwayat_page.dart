@@ -21,15 +21,15 @@ class RiwayatPage extends StatefulWidget {
 
 class _RiwayatPageState extends State<RiwayatPage> {
   // --- TEMA WARNA CYAN ---
-  final Color bgDark = const Color(0xFF0B1A1A);
-  final Color primaryCyan = const Color(0xFF00ACC1);
-  final Color accentCyan = const Color(0xFF18FFFF);
-  final Color lightCyan = const Color(0xFF84FFFF);
-  final Color primaryWhite = Colors.white;
-  final Color accentGrey = Colors.grey.shade400;
-  final Color cardGlass = Colors.white.withOpacity(0.05);
-  final Color borderGlass = Colors.white.withOpacity(0.1);
-
+  // --- TEMA WARNA CYBERPUNK ---
+ final Color bgDark = const Color(0xFF0B0C10); // Hitam kebiruan
+ final Color primaryCyan = const Color(0xFF9D4EDD); // Ungu utama
+ final Color accentCyan = const Color(0xFFFF3366); // Merah neon
+ final Color lightCyan = const Color(0xFFC77DFF); // Ungu terang
+ final Color primaryWhite = Colors.white;
+ final Color accentGrey = Colors.grey.shade400;
+ final Color cardGlass = Colors.white.withOpacity(0.05);
+ final Color borderGlass = Color(0xFF3A2E5C); // Border ungu (sebelumnya putih transparan)
   List<ActivityModel> activities = [];
   bool isLoading = true;
 

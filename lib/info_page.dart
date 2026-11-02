@@ -7,27 +7,27 @@ import 'api_config.dart';
 
 // ─── Palette ──────────────────────────────────────────────────────────────────
 class _C {
-  static const bg        = Color(0xFF060B14);
-  static const surface   = Color(0xFF0C1424);
-  static const card      = Color(0xFF101A2E);
-  static const border    = Color(0xFF1A2D4A);
-  static const borderLit = Color(0xFF1E3A5F);
+  static const bg        = Color(0xFF0B0C10);
+  static const surface   = Color(0xFF121420);
+  static const card      = Color(0xFF1F1B2E);
+  static const border    = Color(0xFF3A2E5C);
+  static const borderLit = Color(0xFF5C42A1);
 
-  static const blue      = Color(0xFF1B6FBD);
-  static const blueMid   = Color(0xFF2D8FE8);
-  static const blueLight = Color(0xFF56AEF5);
+  static const blue      = Color(0xFF6A4C93);
+  static const blueMid   = Color(0xFF9D4EDD);
+  static const blueLight = Color(0xFFC77DFF);
 
-  static const green     = Color(0xFF22C55E);
-  static const amber     = Color(0xFFF59E0B);
-  static const red       = Color(0xFFEF4444);
-  static const purple    = Color(0xFFA78BFA);
+  static const green     = Color(0xFF00E676); 
+  static const amber     = Color(0xFFFF9F00);
+  static const red       = Color(0xFFFF3366); 
+  static const purple    = Color(0xFF7C4DFF);
 
-  static const text      = Color(0xFFE2EDF9);
-  static const textSub   = Color(0xFF7A9BBF);
-  static const textDim   = Color(0xFF3A5470);
+  static const text      = Color(0xFFF0F0F0);
+  static const textSub   = Color(0xFFA0A0B0);
+  static const textDim   = Color(0xFF505060);
 
   static const LinearGradient btnGrad = LinearGradient(
-    colors: [blueMid, blueLight],
+    colors: [blueMid, blueLight], // Gradien Ungu
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );

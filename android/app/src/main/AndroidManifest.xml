@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:label="Astral Engine"
+        android:label="X-Dark Crasher"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"> <!-- ⬅️ WAJIB UNTUK HTTP -->

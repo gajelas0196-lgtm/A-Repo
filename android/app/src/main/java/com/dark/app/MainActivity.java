@@ -1,4 +1,4 @@
-package com.nullx.cyber;
+package com.dark.app;
 
 import io.flutter.embedding.android.FlutterActivity;
 

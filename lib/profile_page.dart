@@ -7,27 +7,30 @@ import 'change_password_page.dart';
 
 // ─── Palette (sama dengan Tools Page) ─────────────────────────────────────
 class _C {
-  static const bg        = Color(0xFF0A0F1A);
-  static const surface   = Color(0xFF0D1525);
-  static const card      = Color(0xFF111C30);
-  static const cardInner = Color(0xFF162035);
-  static const border    = Color(0xFF1C2E48);
-  static const borderLit = Color(0xFF1E3A5F);
-  static const steel     = Color(0xFF1A4F8A);
-  static const blueMid   = Color(0xFF2370BE);
-  static const blueLight = Color(0xFF4A94E8);
-  static const chrome    = Color(0xFF7AB4E8);
-  static const frost     = Color(0xFFADD4F5);
-  static const red       = Color(0xFFEF4444);
-  static const amber     = Color(0xFFF59E0B);
-  static const green     = Color(0xFF22C55E);
-  static const purple    = Color(0xFFA78BFA);
-  static const pink      = Color(0xFFEC4899);
-  static const teal      = Color(0xFF14B8A6);
-  static const blue      = Color(0xFF3B82F6);
-  static const text      = Color(0xFFDEEEFB);
-  static const textSub   = Color(0xFF6A92B8);
-  static const textDim   = Color(0xFF2E4E6E);
+  static const bg        = Color(0xFF0B0C10); // Background gelap
+  static const surface   = Color(0xFF121420); 
+  static const card      = Color(0xFF1F1B2E); // Card ungu gelap
+  static const cardInner = Color(0xFF2A243D); 
+  static const border    = Color(0xFF3A2E5C); 
+  static const borderLit = Color(0xFF5C42A1); 
+  
+  static const steel     = Color(0xFF6A4C93);
+  static const blueMid   = Color(0xFF9D4EDD); // Ungu neon
+  static const blueLight = Color(0xFFC77DFF); // Ungu terang
+  static const chrome    = Color(0xFFE0AAFF); 
+  static const frost     = Color(0xFFF3E8FF); 
+  
+  static const red       = Color(0xFFFF3366); // Merah neon
+  static const amber     = Color(0xFFFF9F00); 
+  static const green     = Color(0xFF00E676); 
+  static const purple    = Color(0xFF7C4DFF); 
+  static const pink      = Color(0xFFFF007F); 
+  static const teal      = Color(0xFF00E5FF); 
+  static const blue      = Color(0xFF2979FF); 
+  
+  static const text      = Color(0xFFF0F0F0); 
+  static const textSub   = Color(0xFFA0A0B0); 
+  static const textDim   = Color(0xFF505060); 
   static const white     = Color(0xFFFFFFFF);
 }
 

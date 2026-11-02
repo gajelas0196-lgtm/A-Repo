@@ -310,7 +310,7 @@ class _LoginPageState extends State<LoginPage>
                 fullWidth: true,
                 onTap: () async {
                   Navigator.pop(ctx);
-                  await launchUrl(Uri.parse('https://t.me/maklongemis'),
+                  await launchUrl(Uri.parse('https://t.me/By_Zii16'),
                       mode: LaunchMode.externalApplication);
                 },
               ),
@@ -464,7 +464,7 @@ class _LoginPageState extends State<LoginPage>
           end: Alignment.bottomRight,
         ).createShader(b),
         child: const Text(
-          'ASTRAL ENGINE',
+          'X-Dark project',
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900,
@@ -568,7 +568,7 @@ class _LoginPageState extends State<LoginPage>
             style: TextStyle(color: _C.textSub, fontSize: 13)),
         GestureDetector(
           onTap: () => launchUrl(
-              Uri.parse('https://t.me/maklongemis'),
+              Uri.parse('https://t.me.By_Zii16'),
               mode: LaunchMode.externalApplication),
           child: ShaderMask(
             shaderCallback: (b) => _C.accentGrad.createShader(b),
@@ -582,7 +582,7 @@ class _LoginPageState extends State<LoginPage>
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Icon(Icons.circle, color: _C.blueMid, size: 5),
         const SizedBox(width: 8),
-        const Text('© 2026 ASTRAL ENGINE',
+        const Text('© 2026 X-Dark Project',
             style: TextStyle(color: _C.textDim, fontSize: 11,
                 fontWeight: FontWeight.w500, letterSpacing: 0.5)),
         const SizedBox(width: 8),

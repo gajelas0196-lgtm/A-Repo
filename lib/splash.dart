@@ -159,7 +159,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               children: [
                 Text(
-                  'ASTRAL ENGINE',
+                  'X-Dark project',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -175,7 +175,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Powered by @maklongemis',
+                  'Powered by @By_Zii16',
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.white.withOpacity(0.7),

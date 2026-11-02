@@ -34,17 +34,17 @@ class _AdminPageState extends State<AdminPage>
   bool isLoading = false;
 
   // ─── Warna Biru Tua Metalik Modern ───────────────────────────────────────
-  static const Color bgBase      = Color(0xFF070D18);
-  static const Color bgSurface   = Color(0xFF0D1526);
-  static const Color bgCard      = Color(0xFF111D33);
-  static const Color borderColor = Color(0xFF1E3055);
-  static const Color primary     = Color(0xFF2B6CB0);
-  static const Color primaryLit  = Color(0xFF4299E1);
-  static const Color accent      = Color(0xFF63B3ED);
-  static const Color accentGlow  = Color(0xFF90CDF4);
-  static const Color textPrimary = Color(0xFFEBF8FF);
-  static const Color textMuted   = Color(0xFF718096);
-  static const Color textSub     = Color(0xFF4A6FA5);
+  static const Color bgBase      = Color(0xFF0B0C10); 
+ static const Color bgSurface   = Color(0xFF121420); 
+ static const Color bgCard      = Color(0xFF1F1B2E); 
+ static const Color borderColor = Color(0xFF3A2E5C); 
+ static const Color primary     = Color(0xFF9D4EDD); 
+ static const Color primaryLit  = Color(0xFFC77DFF); 
+ static const Color accent      = Color(0xFFFF3366); 
+ static const Color accentGlow  = Color(0xFFFF007F); 
+ static const Color textPrimary = Color(0xFFF0F0F0); 
+ static const Color textMuted   = Color(0xFFA0A0B0); 
+ static const Color textSub     = Color(0xFF505060); 
 
   // ─── Animasi ──────────────────────────────────────────────────────────────
   late AnimationController _headerController;

@@ -33,21 +33,22 @@ import 'al_quran.dart';
 import 'anime_home.dart';
 
 // ─── COLORS ────────────────────────────────────────────────────────────────────
-const Color kBg      = Color(0xFF0D1117);
-const Color kCard    = Color(0xFF161B22);
-const Color kCardAlt = Color(0xFF1C2333);
-const Color kBorder  = Color(0xFF30363D);
-const Color kCyan    = Color(0xFF00E5FF);
-const Color kGreen   = Color(0xFF00E676);
-const Color kPink    = Color(0xFFE91E8C);
-const Color kOrange  = Color(0xFFFF6D00);
-const Color kBlue    = Color(0xFF2979FF);
-const Color kPurple  = Color(0xFF7C4DFF);
-const Color kYellow  = Color(0xFFFFD600);
+const Color kBg      = Color(0xFF0B0C10); // Latar belakang gelap
+const Color kCard    = Color(0xFF121420); // Kartu gelap
+const Color kCardAlt = Color(0xFF1F1B2E); // Kartu alternatif ungu gelap
+const Color kBorder  = Color(0xFF3A2E5C); // Garis border ungu
+
+const Color kCyan    = Color(0xFF66FCF1); // Cyan neon
+const Color kGreen   = Color(0xFF00E676); // Hijau neon
+const Color kPink    = Color(0xFFFF3366); // Merah neon (sebelumnya pink)
+const Color kOrange  = Color(0xFFFF9F00); // Oranye
+const Color kBlue    = Color(0xFF2979FF); // Biru
+const Color kPurple  = Color(0xFF9D4EDD); // Ungu neon
+const Color kYellow  = Color(0xFFFFD600); // Kuning
+
 const Color kWhite   = Colors.white;
 const Color kWhite54 = Colors.white54;
 const Color kWhite24 = Colors.white24;
-
 // ─── Prayer Time Service ───────────────────────────────────────────────────────
 class PrayerTimeService {
   static Future<Map<String, dynamic>> fetchPrayerTimes(String city) async {
@@ -815,7 +816,7 @@ class _DashboardPageState extends State<DashboardPage>
             _buildHadithSection(),
             const SizedBox(height: 24),
             Center(
-              child: Text('ASTRAL ENGINE',
+              child: Text('X-DRAK CRASHER',
                 style: TextStyle(
                   color: kWhite.withOpacity(0.12),
                   fontSize: 13, letterSpacing: 4,
@@ -874,7 +875,7 @@ class _DashboardPageState extends State<DashboardPage>
               ),
               const Positioned(
                 left: 16, bottom: 14,
-                child: Text('ASTRAL ENGINE',
+                child: Text('X-DARK CRASHER',
                   style: TextStyle(
                     color: kWhite, fontSize: 22, fontWeight: FontWeight.bold,
                     fontFamily: 'Orbitron', letterSpacing: 2,
@@ -976,7 +977,7 @@ class _DashboardPageState extends State<DashboardPage>
                     children: [
                       _AnimatedDot(color: kCyan),
                       const SizedBox(width: 10),
-                      const Text('ASTRAL ENGINE DASHBOARD',
+                      const Text('X-DARK DASHBOARD',
                           style: TextStyle(
                             color: kCyan, fontSize: 11, fontWeight: FontWeight.bold,
                             fontFamily: 'Orbitron', letterSpacing: 1.5)),
@@ -1096,9 +1097,9 @@ class _DashboardPageState extends State<DashboardPage>
         icon: FontAwesomeIcons.telegram,
         bgIcon: FontAwesomeIcons.telegram,
         title: 'Join Channel',
-        subtitle: 'Astral Info Channel',
+        subtitle: 'X-Dark Info Channel',
         gradient: [const Color(0xFF00B4D8), const Color(0xFF0077B6)],
-        onTap: () => _openUrl('https://t.me/aboutszamz'),
+        onTap: () => _openUrl('https://t.me/+JZrrQHaB-645OWM1'),
       ),
       _QuickActionData(
         icon: FontAwesomeIcons.bookQuran,
@@ -1159,7 +1160,7 @@ class _DashboardPageState extends State<DashboardPage>
                       width: 7, height: 7,
                       decoration: const BoxDecoration(shape: BoxShape.circle, color: kYellow)),
                   const SizedBox(width: 5),
-                  const Text('ASTRAL',
+                  const Text('X-DARK',
                       style: TextStyle(color: kYellow, fontSize: 11, fontWeight: FontWeight.bold)),
                 ]),
               ),
@@ -1556,7 +1557,7 @@ class _DashboardPageState extends State<DashboardPage>
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: kGreen.withOpacity(0.5)),
                       ),
-                      child: const Text('ASTRAL',
+                      child: const Text('X-DARK',
                           style: TextStyle(color: kGreen, fontSize: 10, fontWeight: FontWeight.bold)),
                     ),
                   ],
