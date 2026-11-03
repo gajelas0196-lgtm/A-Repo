@@ -61,7 +61,7 @@ const _rules = [
   ),
   _Rule(
     title: 'Larangan Banting Harga',
-    desc:  'Dilarang merusak atau menurunkan harga yang telah ditentukan di bawah ketentuan Astral Engine.',
+    desc:  'Dilarang merusak atau menurunkan harga yang telah ditentukan di bawah ketentuan X-Dark Crasher.',
     icon:  Icons.trending_down_rounded,
     color: Color(0xFF34D399),
   ),
@@ -78,7 +78,7 @@ class _Rule {
 
 // ─── Fallback Data (agar tidak loading terus) ────────────────────────────────
 const _fallbackServerInfo = {
-  'name': 'Astral Server',
+  'name': 'X-Dark Server',
   'version': '1..0',
   'status': 'online',
 };
@@ -605,7 +605,7 @@ class _InfoPageState extends State<InfoPage> with TickerProviderStateMixin {
           ),
         ),
         const SizedBox(width: 10),
-        const Text('Astral Engine',
+        const Text('X-Dark Crasher',
             style: TextStyle(color: _C.textDim, fontSize: 10,
                 fontWeight: FontWeight.w600, letterSpacing: 0.5)),
         const SizedBox(width: 10),

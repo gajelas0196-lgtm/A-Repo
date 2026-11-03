@@ -166,7 +166,7 @@ class _LandingPageState extends State<LandingPage>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(28),
                   child: Image.asset(
-                    'assets/images/login.png',
+                    'assets/videos/login.mp4',
                     width: double.infinity,
                     height: double.infinity,
                     fit: BoxFit.cover,
@@ -428,7 +428,7 @@ class _LandingPageState extends State<LandingPage>
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () => _openUrl('https://t.me/maklongemis'),
+            onTap: () => _openUrl('https://t.me/By_Zii16'),
             borderRadius: BorderRadius.circular(16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -506,7 +506,7 @@ class _LandingPageState extends State<LandingPage>
       icon: FontAwesomeIcons.telegram,
       bgColor: Color(0xFF29B6F6),
       label: 'Telegram',
-      onTap: () => _openUrl('https://t.me/maklongemis'),
+      onTap: () => _openUrl('https://t.me/By_Zii16'),
     ),
     _buildSocialItem(
       icon: FontAwesomeIcons.tiktok,

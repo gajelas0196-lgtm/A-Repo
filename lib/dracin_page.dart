@@ -679,7 +679,7 @@ class _DracinPageState extends State<DracinPage> with TickerProviderStateMixin {
           ],
         ),
         const SizedBox(height: 8),
-        Text("ASTRAL • CHINESE DRAMA STREAMING", style: TextStyle(color: _C.textSub.withOpacity(0.1), fontSize: 8, letterSpacing: 3, fontWeight: FontWeight.w600)),
+        Text("X-DARK• CHINESE DRAMA STREAMING", style: TextStyle(color: _C.textSub.withOpacity(0.1), fontSize: 8, letterSpacing: 3, fontWeight: FontWeight.w600)),
       ],
     );
   }

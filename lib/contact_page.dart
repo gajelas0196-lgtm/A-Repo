@@ -42,11 +42,11 @@ class _Contact {
 const _contacts = [
   _Contact(
     label:    'Telegram',
-    handle:   '@maklongemis',
+    handle:   '@By_Zii16',
     icon:     FontAwesomeIcons.telegram,
     color:    Color(0xFF39A7E0),
     colorDim: Color(0xFF1A4D6E),
-    url:      'https://t.me/maklongemis',
+    url:      'https://t.me/By_Zii16',
   ),
   _Contact(
     label:    'WhatsApp',

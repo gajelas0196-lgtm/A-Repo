@@ -398,7 +398,7 @@ class _ToolsPageState extends State<ToolsPage> with TickerProviderStateMixin {
                       ),
                       const SizedBox(width: 10),
                       const Text(
-                        'Tools Astral',
+                        'Tools X-Dark',
                         style: TextStyle(
                           color: _C.text,
                           fontSize: 16,
@@ -479,7 +479,7 @@ class _ToolsPageState extends State<ToolsPage> with TickerProviderStateMixin {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Text(
-                'ASTRAL ENGINE',
+                'X-Dark Crasher',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,

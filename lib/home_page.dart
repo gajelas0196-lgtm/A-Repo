@@ -337,7 +337,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           const SizedBox(width: 10),
           Text(
-            'ASTRAL ENGINE',
+            'X-Dark Crasher',
             style: TextStyle(
               color: _textWhite,
               fontFamily: 'Orbitron',

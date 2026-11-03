@@ -562,34 +562,69 @@ class _LoginPageState extends State<LoginPage>
   }
 
   Widget _buildFooter() {
-    return Column(children: [
-      Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const Text('Belum punya akses? ',
-            style: TextStyle(color: _C.textSub, fontSize: 13)),
-        GestureDetector(
-          onTap: () => launchUrl(
-              Uri.parse('https://t.me.By_Zii16'),
-              mode: LaunchMode.externalApplication),
-          child: ShaderMask(
-            shaderCallback: (b) => _C.accentGrad.createShader(b),
-            child: const Text('BELI SEKARANG',
-                style: TextStyle(color: Colors.white, fontSize: 13,
-                    fontWeight: FontWeight.w800, letterSpacing: 0.5)),
-          ),
+  return Column(children: [
+    
+    // 🔥 TOMBOL FREE TRIAL 🔥
+    GestureDetector(
+      onTap: _isLoading ? null : _claimFreeTrial,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        decoration: BoxDecoration(
+          color: _C.green.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: _C.green.withOpacity(0.5)),
         ),
-      ]),
-      const SizedBox(height: 24),
-      Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Icon(Icons.circle, color: _C.blueMid, size: 5),
-        const SizedBox(width: 8),
-        const Text('© 2026 X-Dark Project',
-            style: TextStyle(color: _C.textDim, fontSize: 11,
-                fontWeight: FontWeight.w500, letterSpacing: 0.5)),
-        const SizedBox(width: 8),
-        Icon(Icons.circle, color: _C.blueMid, size: 5),
-      ]),
-    ]);
-  }
+        child: const Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.card_giftcard, color: _C.green, size: 18),
+            SizedBox(width: 8),
+            Text('Klaim Free Access 1 Hari', style: TextStyle(color: _C.green, fontWeight: FontWeight.bold, fontSize: 13)),
+          ],
+        ),
+      ),
+    ),
+    
+    const SizedBox(height: 20),
+
+    // Tombol Beli Sekarang (Buka Web Order)
+    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      const Text('Belum punya akses? ',
+          style: TextStyle(color: _C.textSub, fontSize: 13)),
+      GestureDetector(
+        onTap: () async {
+          // 🔥 UBAH URL INI DENGAN DOMAIN/PORT PTERODACTYL ANDA 🔥
+          final url = Uri.parse('http://alfa-store-officials.alfamarket2.my.id:3505/order.html');
+          if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+            if (context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Gagal membuka halaman order')),
+              );
+            }
+          }
+        },
+        child: ShaderMask(
+          shaderCallback: (b) => _C.accentGrad.createShader(b),
+          child: const Text('BELI SEKARANG',
+              style: TextStyle(color: Colors.white, fontSize: 13,
+                  fontWeight: FontWeight.w800, letterSpacing: 0.5)),
+        ),
+      ),
+    ]),
+    
+    const SizedBox(height: 24),
+    
+    // Copyright
+    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Icon(Icons.circle, color: _C.blueMid, size: 5),
+      const SizedBox(width: 8),
+      const Text('© 2026 X-Dark Project',
+          style: TextStyle(color: _C.textDim, fontSize: 11,
+              fontWeight: FontWeight.w500, letterSpacing: 0.5)),
+      const SizedBox(width: 8),
+      Icon(Icons.circle, color: _C.blueMid, size: 5),
+    ]),
+  ]);
 }
 
 // ─── Login Field ──────────────────────────────────────────────────────────────

@@ -210,11 +210,15 @@ class DashboardPage extends StatefulWidget {
   });
 
   @override
-  State<DashboardPage> createState() => _DashboardPageState();
+  State<DashboardPage> createState() => _DashboardPageState(); 
 }
 
 class _DashboardPageState extends State<DashboardPage>
     with TickerProviderStateMixin {
+  
+ 
+  bool is3DMode = false; 
+
   // ── State ────────────────────────────────────────────────────────────────
   late String sessionKey, username, password, role, expiredDate;
   late List<Map<String, dynamic>> listBug, listDoos;
@@ -795,99 +799,153 @@ class _DashboardPageState extends State<DashboardPage>
   }
 
   // ── HOME PAGE ─────────────────────────────────────────────────────────────
-  Widget _buildHomePage() {
-    return FadeTransition(
-      opacity: _fadeAnim,
-      child: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildBannerVideo(),
-            const SizedBox(height: 14),
-            _buildWelcomeCard(),
-            const SizedBox(height: 14),
-            _buildQuickActionsSection(),
-            const SizedBox(height: 14),
-            _buildLatestUpdates(),
-            const SizedBox(height: 14),
-            _buildPrayerSection(),
-            const SizedBox(height: 14),
-            _buildHadithSection(),
-            const SizedBox(height: 24),
-            Center(
-              child: Text('X-DRAK CRASHER',
-                style: TextStyle(
-                  color: kWhite.withOpacity(0.12),
-                  fontSize: 13, letterSpacing: 4,
-                  fontFamily: 'Orbitron',
-                ),
+Widget _buildHomePage() {
+  return FadeTransition(
+    opacity: _fadeAnim,
+    child: SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildBannerVideo(),
+          const SizedBox(height: 14),
+          _buildWelcomeCard(),
+          const SizedBox(height: 14),
+          _buildQuickActionsSection(),
+          const SizedBox(height: 14),
+          _buildLatestUpdates(),
+          const SizedBox(height: 14),
+          _buildPrayerSection(),
+          const SizedBox(height: 14),
+          _buildHadithSection(),
+          const SizedBox(height: 24),
+          
+          // 🔥 TOMBOL TOGGLE 3D DIPANGGIL DI SINI 🔥
+          _buildToggle3D(),
+          
+          const SizedBox(height: 24),
+          Center(
+            child: Text('X-DRAK CRASHER',
+              style: TextStyle(
+                color: kWhite.withOpacity(0.12),
+                fontSize: 13, letterSpacing: 4,
+                fontFamily: 'Orbitron',
               ),
             ),
-            const SizedBox(height: 20),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  // ── Banner Video ──────────────────────────────────────────────────────────
-  Widget _buildBannerVideo() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 14),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Container(
-          height: 190, width: double.infinity,
-          color: const Color(0xFF080C12),
-          child: Stack(
-            fit: StackFit.expand,
+// 🔥 FUNGSI TOGGLE 3D DITARUH DI SINI (Di dalam class _DashboardPageState) 🔥
+Widget _buildToggle3D() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+    child: Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      decoration: BoxDecoration(
+        color: kCard,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: is3DMode ? kCyan.withOpacity(0.5) : kBorder.withOpacity(0.4)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
             children: [
-              if (_menuVideoCtrl != null && _menuVideoCtrl!.value.isInitialized)
-                FittedBox(
-                  fit: BoxFit.cover,
-                  child: SizedBox(
-                    width: _menuVideoCtrl!.value.size.width,
-                    height: _menuVideoCtrl!.value.size.height,
-                    child: VideoPlayer(_menuVideoCtrl!),
-                  ),
-                )
-              else
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF0A0F1E), Color(0xFF1A1A2E)],
-                      begin: Alignment.topLeft, end: Alignment.bottomRight,
-                    ),
-                  ),
-                ),
-              Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.black.withOpacity(0.7),
-                      Colors.transparent,
-                      Colors.black.withOpacity(0.4),
-                    ],
-                    begin: Alignment.centerLeft, end: Alignment.centerRight,
-                  ),
-                ),
+              Icon(
+                is3DMode ? Icons.view_in_ar : Icons.grid_view_rounded,
+                color: is3DMode ? kCyan : kWhite54,
+                size: 20,
               ),
-              const Positioned(
-                left: 16, bottom: 14,
-                child: Text('X-DARK CRASHER',
-                  style: TextStyle(
-                    color: kWhite, fontSize: 22, fontWeight: FontWeight.bold,
-                    fontFamily: 'Orbitron', letterSpacing: 2,
-                  ),
+              const SizedBox(width: 12),
+              Text(
+                is3DMode ? "TAMPILAN 3D AKTIF" : "TAMPILAN BASIC",
+                style: TextStyle(
+                  color: is3DMode ? kCyan : kWhite,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Orbitron',
+                  fontSize: 12,
                 ),
               ),
             ],
           ),
+          Switch(
+            value: is3DMode,
+            activeColor: kCyan,
+            inactiveThumbColor: kWhite54,
+            onChanged: (value) {
+              setState(() {
+                is3DMode = value;
+              });
+            },
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// ── Banner Video ──────────────────────────────────────────────────────────
+Widget _buildBannerVideo() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 14),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        height: 190, width: double.infinity,
+        color: const Color(0xFF080C12),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            if (_menuVideoCtrl != null && _menuVideoCtrl!.value.isInitialized)
+              FittedBox(
+                fit: BoxFit.cover,
+                child: SizedBox(
+                  width: _menuVideoCtrl!.value.size.width,
+                  height: _menuVideoCtrl!.value.size.height,
+                  child: VideoPlayer(_menuVideoCtrl!),
+                ),
+              )
+            else
+              Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFF0A0F1E), Color(0xFF1A1A2E)],
+                    begin: Alignment.topLeft, end: Alignment.bottomRight,
+                  ),
+                ),
+              ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.black.withOpacity(0.7),
+                    Colors.transparent,
+                    Colors.black.withOpacity(0.4),
+                  ],
+                  begin: Alignment.centerLeft, end: Alignment.centerRight,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 16, bottom: 14,
+              child: Text('X-DARK CRASHER',
+                style: TextStyle(
+                  color: kWhite, fontSize: 22, fontWeight: FontWeight.bold,
+                  fontFamily: 'Orbitron', letterSpacing: 2,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   // ── Welcome Card ──────────────────────────────────────────────────────────
   Widget _buildWelcomeCard() {
